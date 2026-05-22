@@ -1,5 +1,7 @@
 'use client'
 
+import AnimatedSection from './AnimatedSection'
+
 export default function Skills() {
   const skills = [
     { name: "React/Next.js", desc: "⚡ Fullstack", icon: "fab fa-react" },
@@ -33,29 +35,35 @@ export default function Skills() {
         </div>
       </div>
 
+      {/* Animated Grid - EXACT SAME CONTAINER SIZES as original */}
       <div className="relative z-10 mt-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {skills.map((skill, index) => (
-            <div 
+            <AnimatedSection 
               key={index} 
-              className="skill-card relative bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/20 overflow-hidden cursor-pointer"
+              delay={index * 0.1}
+              direction="up"
             >
-              {/* Main icon */}
-              <i className={`${skill.icon} skill-main-icon text-3xl text-white mb-2 block transition-all duration-300`}></i>
-              <h4 className={`skill-title font-['Orbitron'] font-bold mt-2 mb-1 transition-all duration-300 text-gray-400`}>{skill.name}</h4>
-              <span className={`skill-desc text-xs transition-all duration-300 text-gray-500`}>{skill.desc}</span>
-              
-              {/* Large background icon */}
-              <i 
-                className={`${skill.icon} skill-bg-icon absolute pointer-events-none`}
-                style={{
-                  position: 'absolute',
-                  bottom: '-20px',
-                  right: '-20px',
-                  fontSize: '5rem'
-                }}
-              ></i>
-            </div>
+              <div 
+                className="skill-card relative bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/20 overflow-hidden cursor-pointer"
+              >
+                {/* Main icon */}
+                <i className={`${skill.icon} skill-main-icon text-3xl text-white mb-2 block transition-all duration-300`}></i>
+                <h4 className={`skill-title font-['Orbitron'] font-bold mt-2 mb-1 transition-all duration-300 text-gray-400`}>{skill.name}</h4>
+                <span className={`skill-desc text-xs transition-all duration-300 text-gray-500`}>{skill.desc}</span>
+                
+                {/* Large background icon */}
+                <i 
+                  className={`${skill.icon} skill-bg-icon absolute pointer-events-none`}
+                  style={{
+                    position: 'absolute',
+                    bottom: '-20px',
+                    right: '-20px',
+                    fontSize: '5rem'
+                  }}
+                ></i>
+              </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>

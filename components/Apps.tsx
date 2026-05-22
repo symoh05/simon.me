@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import AnimatedSection from './AnimatedSection'
 
 export default function Apps() {
   const [touchedIndex, setTouchedIndex] = useState<number | null>(null)
@@ -54,67 +55,72 @@ export default function Apps() {
       <div className="mt-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {apps.map((app, index) => (
-            <div 
+            <AnimatedSection 
               key={index} 
-              onClick={() => handleTap(index)}
-              onMouseEnter={() => setTouchedIndex(index)}
-              onMouseLeave={() => setTouchedIndex(null)}
-              className="relative bg-white/5 backdrop-blur-md rounded-xl overflow-hidden border border-white/20 transition-all duration-300 cursor-pointer group"
-              style={{
-                transform: touchedIndex === index ? 'translateY(-4px)' : 'translateY(0)',
-                borderColor: touchedIndex === index ? 'rgba(255, 255, 255, 0.5)' : 'rgba(255, 255, 255, 0.2)'
-              }}
+              delay={index * 0.15}
+              direction={index % 2 === 0 ? 'left' : 'right'}
             >
-              {/* Image section */}
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={app.image} 
-                  alt={app.title}
-                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
-                  style={{
-                    transform: touchedIndex === index ? 'scale(1.05)' : 'scale(1)'
-                  }}
-                />
-                <div className="absolute inset-0 bg-black/30"></div>
-                
-                {/* Tech badges */}
-                <div className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-2">
-                  {app.tech.map((tech, i) => (
-                    <span key={i} className="bg-black/70 backdrop-blur-sm px-2 py-1 rounded-full text-xs text-white border border-white/20">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              
-              {/* Content section */}
-              <div className="relative p-5">
-                <div className="flex items-center justify-between gap-2 mb-2">
-                  <h3 className="text-base md:text-xl font-bold text-white">
-                    {app.title}
-                  </h3>
-                  <i className="fas fa-clock text-gray-400 text-xs md:text-sm group-hover:text-white transition-all duration-300"></i>
-                </div>
-                <p className="text-gray-400 text-xs md:text-sm line-clamp-2">
-                  {app.desc}
-                </p>
-              </div>
-              
-              {/* Large translucent background icon */}
-              <i 
-                className={`${app.icon} absolute pointer-events-none transition-all duration-300`}
+              <div 
+                onClick={() => handleTap(index)}
+                onMouseEnter={() => setTouchedIndex(index)}
+                onMouseLeave={() => setTouchedIndex(null)}
+                className="relative bg-white/5 backdrop-blur-md rounded-xl overflow-hidden border border-white/20 transition-all duration-300 cursor-pointer group"
                 style={{
-                  position: 'absolute',
-                  bottom: '-25px',
-                  right: '-25px',
-                  fontSize: '7rem',
-                  opacity: touchedIndex === index ? 0.3 : 0.12,
-                  transform: touchedIndex === index ? 'rotate(-30deg) scale(1.5)' : 'rotate(-15deg) scale(1)',
-                  transition: 'all 0.3s ease',
-                  zIndex: 0
+                  transform: touchedIndex === index ? 'translateY(-4px)' : 'translateY(0)',
+                  borderColor: touchedIndex === index ? 'rgba(255, 255, 255, 0.5)' : 'rgba(255, 255, 255, 0.2)'
                 }}
-              ></i>
-            </div>
+              >
+                {/* Image section */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={app.image} 
+                    alt={app.title}
+                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                    style={{
+                      transform: touchedIndex === index ? 'scale(1.05)' : 'scale(1)'
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/30"></div>
+                  
+                  {/* Tech badges */}
+                  <div className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-2">
+                    {app.tech.map((tech, i) => (
+                      <span key={i} className="bg-black/70 backdrop-blur-sm px-2 py-1 rounded-full text-xs text-white border border-white/20">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Content section */}
+                <div className="relative p-5">
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <h3 className="text-base md:text-xl font-bold text-white">
+                      {app.title}
+                    </h3>
+                    <i className="fas fa-clock text-gray-400 text-xs md:text-sm group-hover:text-white transition-all duration-300"></i>
+                  </div>
+                  <p className="text-gray-400 text-xs md:text-sm line-clamp-2">
+                    {app.desc}
+                  </p>
+                </div>
+                
+                {/* Large translucent background icon */}
+                <i 
+                  className={`${app.icon} absolute pointer-events-none transition-all duration-300`}
+                  style={{
+                    position: 'absolute',
+                    bottom: '-25px',
+                    right: '-25px',
+                    fontSize: '7rem',
+                    opacity: touchedIndex === index ? 0.3 : 0.12,
+                    transform: touchedIndex === index ? 'rotate(-30deg) scale(1.5)' : 'rotate(-15deg) scale(1)',
+                    transition: 'all 0.3s ease',
+                    zIndex: 0
+                  }}
+                ></i>
+              </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>
