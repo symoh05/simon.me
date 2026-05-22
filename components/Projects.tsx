@@ -45,7 +45,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-12 scroll-mt-20">
-      {/* Sticky Header - Same responsive size as Apps */}
+      {/* Sticky Header */}
       <div className="sticky top-[70px] z-40 -mx-4 px-4 md:-mx-6 md:px-6 lg:-mx-8 lg:px-8">
         <div className="bg-black/80 backdrop-blur-md rounded-xl border border-white/30 py-2 md:py-3 px-3 md:px-4 flex items-center justify-between gap-2 md:gap-4 flex-nowrap shadow-lg max-w-7xl mx-auto">
           <div className="flex items-center gap-2 md:gap-3 flex-nowrap">
@@ -59,15 +59,10 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Added margin-top to create space between header and cards */}
       <div className="mt-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <AnimatedSection 
-              key={index} 
-              delay={index * 0.15}
-              direction={index % 2 === 0 ? 'left' : 'right'}
-            >
+            <AnimatedSection key={index} delay={index * 0.15}>
               <div 
                 onClick={() => handleTap(index, project.link)}
                 onMouseEnter={() => setTouchedIndex(index)}
@@ -90,7 +85,7 @@ export default function Projects() {
                   />
                   <div className="absolute inset-0 bg-black/30"></div>
                   
-                  {/* Tech badges - INSIDE IMAGE at bottom */}
+                  {/* Tech badges */}
                   <div className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-2">
                     {project.tech.map((tech, i) => (
                       <span key={i} className="bg-black/70 backdrop-blur-sm px-2 py-1 rounded-full text-xs text-white border border-white/20">
@@ -102,12 +97,10 @@ export default function Projects() {
                 
                 {/* Content section */}
                 <div className="relative p-5">
-                  {/* Title and icon in same row */}
                   <div className="flex items-center justify-between gap-2 mb-2">
                     <h3 className="text-base md:text-xl font-bold text-white">
                       {project.title}
                     </h3>
-                    {/* Icon next to title - no border, just icon */}
                     <i className="fas fa-external-link-alt text-gray-400 text-xs md:text-sm group-hover:text-white group-hover:translate-x-1 transition-all duration-300"></i>
                   </div>
                   <p className="text-gray-400 text-xs md:text-sm line-clamp-2">

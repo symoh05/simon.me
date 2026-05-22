@@ -16,7 +16,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="py-12 scroll-mt-20 relative">
-      {/* Simple watermark - visible but subtle */}
+      {/* Simple watermark */}
       <div className="absolute right-8 top-1/2 -translate-y-1/2 text-8xl font-black text-white/5 font-['Orbitron'] pointer-events-none select-none z-0 hidden lg:block">
         TECH
       </div>
@@ -35,24 +35,15 @@ export default function Skills() {
         </div>
       </div>
 
-      {/* Animated Grid - EXACT SAME CONTAINER SIZES as original */}
       <div className="relative z-10 mt-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {skills.map((skill, index) => (
-            <AnimatedSection 
-              key={index} 
-              delay={index * 0.1}
-              direction="up"
-            >
-              <div 
-                className="skill-card relative bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/20 overflow-hidden cursor-pointer"
-              >
-                {/* Main icon */}
+            <AnimatedSection key={index} delay={index * 0.1}>
+              <div className="skill-card relative bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/20 overflow-hidden cursor-pointer">
                 <i className={`${skill.icon} skill-main-icon text-3xl text-white mb-2 block transition-all duration-300`}></i>
                 <h4 className={`skill-title font-['Orbitron'] font-bold mt-2 mb-1 transition-all duration-300 text-gray-400`}>{skill.name}</h4>
                 <span className={`skill-desc text-xs transition-all duration-300 text-gray-500`}>{skill.desc}</span>
                 
-                {/* Large background icon */}
                 <i 
                   className={`${skill.icon} skill-bg-icon absolute pointer-events-none`}
                   style={{

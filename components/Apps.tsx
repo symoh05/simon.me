@@ -37,7 +37,7 @@ export default function Apps() {
 
   return (
     <section id="apps" className="py-12 scroll-mt-20">
-      {/* Sticky Header - Responsive text sizes */}
+      {/* Sticky Header */}
       <div className="sticky top-[70px] z-40 -mx-4 px-4 md:-mx-6 md:px-6 lg:-mx-8 lg:px-8">
         <div className="bg-black/80 backdrop-blur-md rounded-xl border border-white/30 py-2 md:py-3 px-3 md:px-4 flex items-center justify-between gap-2 md:gap-4 flex-nowrap shadow-lg max-w-7xl mx-auto">
           <div className="flex items-center gap-2 md:gap-3 flex-nowrap overflow-x-auto hide-scrollbar">
@@ -55,11 +55,7 @@ export default function Apps() {
       <div className="mt-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {apps.map((app, index) => (
-            <AnimatedSection 
-              key={index} 
-              delay={index * 0.15}
-              direction={index % 2 === 0 ? 'left' : 'right'}
-            >
+            <AnimatedSection key={index} delay={index * 0.15}>
               <div 
                 onClick={() => handleTap(index)}
                 onMouseEnter={() => setTouchedIndex(index)}
