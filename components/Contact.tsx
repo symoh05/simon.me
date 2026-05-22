@@ -15,62 +15,81 @@ export default function Contact() {
   }
 
   const handleGithub = () => {
-    alert('GitHub profile: https://github.com/simon-ngugi-dev (demos & repos coming soon)')
+    alert('GitHub profile: https://github.com/simon-ngugi-dev')
   }
 
   return (
     <section id="contact" className="py-12">
-      <div className="grid md:grid-cols-2 gap-6">
-        {/* Terminal with Header + Code + Connect Now */}
-        <div className="bg-black rounded-2xl overflow-hidden border border-white/20">
-          {/* Terminal Header with dots */}
-          <div className="bg-[#1a1a1a] px-4 py-3 flex items-center gap-2 border-b border-white/10">
-            <div className="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
-            <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
-            <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
-            <span className="text-xs text-gray-400 ml-2">simon@cyberforge:~/portfolio</span>
+      {/* Section Header */}
+      <div className="sticky top-[70px] z-40 -mx-4 px-4 md:-mx-6 md:px-6 lg:-mx-8 lg:px-8">
+        <div className="bg-black/80 backdrop-blur-md rounded-xl border border-white/30 py-2 md:py-3 px-3 md:px-4 flex items-center justify-between gap-2 md:gap-4 flex-nowrap shadow-lg max-w-7xl mx-auto">
+          <div className="flex items-center gap-2 md:gap-3 flex-nowrap">
+            <i className="fas fa-address-card text-xl md:text-2xl lg:text-3xl text-white"></i>
+            <span className="font-['Orbitron'] text-sm md:text-lg lg:text-2xl whitespace-nowrap">//_CONTACT</span>
           </div>
-          
-          {/* Code Content with CUSTOM COLORS */}
-          <div className="p-5 font-mono text-sm space-y-1">
-            <p><span style={{color: '#ff69b4'}}>const</span> <span style={{color: '#ffffff'}}>developer</span> = {`{`}</p>
-            <p className="ml-4"><span style={{color: '#ff69b4'}}>name</span>: <span style={{color: '#98c379'}}>"Simon Ngugi"</span>,</p>
-            <p className="ml-4"><span style={{color: '#ff69b4'}}>role</span>: <span style={{color: '#98c379'}}>"BSc IT Student"</span>,</p>
-            <p className="ml-4"><span style={{color: '#ff69b4'}}>location</span>: <span style={{color: '#98c379'}}>"Nairobi, Kenya"</span>,</p>
-            <p className="ml-4"><span style={{color: '#ff69b4'}}>phone</span>: <span style={{color: '#98c379'}}>"+254 773 743248"</span>,</p>
-            <p className="ml-4"><span style={{color: '#ff69b4'}}>email</span>: <span style={{color: '#98c379'}}>"sngugi175@gmail.com"</span>,</p>
-            <p className="ml-4"><span style={{color: '#ff69b4'}}>stack</span>: [<span style={{color: '#98c379'}}>"Next.js"</span>, <span style={{color: '#98c379'}}>"React Native"</span>, <span style={{color: '#98c379'}}>"PHP"</span>, <span style={{color: '#98c379'}}>"Python"</span>],</p>
-            <p className="ml-4"><span style={{color: '#ff69b4'}}>projects</span>: <span style={{color: '#56b6c2'}}>25</span>,</p>
-            <p className="ml-4"><span style={{color: '#ff69b4'}}>apps</span>: <span style={{color: '#56b6c2'}}>6</span>,</p>
-            <p className="ml-4"><span style={{color: '#ff69b4'}}>status</span>: <span style={{color: '#98c379'}}>"open for work"</span></p>
-            <p>{`}`}</p>
-            <p className="mt-3"><span style={{color: '#ff69b4'}}>await</span> <span style={{color: '#ffffff'}}>developer</span>.<span style={{color: '#e5c07b'}}>connect</span>()</p>
-            <p className="text-white blink mt-2">$ ./connect --now <span className="animate-pulse">█</span></p>
+          <div className="hidden sm:block text-xs text-gray-400 whitespace-nowrap">
+            get in touch ↓
           </div>
         </div>
+      </div>
 
-        {/* Social Links - White icons only */}
-        <div className="space-y-3">
-          <button onClick={handleWhatsApp} className="w-full bg-white/5 border border-white/30 rounded-full p-3 flex items-center gap-3 hover:bg-white/10 hover:translate-x-1 transition-all">
-            <i className="fab fa-whatsapp text-2xl text-white w-8"></i>
-            <span className="text-gray-300">+254 773743248 (WhatsApp)</span>
-            <i className="fas fa-comment-dots text-white ml-auto"></i>
-          </button>
-          <button onClick={handleCall} className="w-full bg-white/5 border border-white/30 rounded-full p-3 flex items-center gap-3 hover:bg-white/10 hover:translate-x-1 transition-all">
-            <i className="fas fa-phone-alt text-2xl text-white w-8"></i>
-            <span className="text-gray-300">0768924330 (Call)</span>
-            <i className="fas fa-phone-volume text-white ml-auto"></i>
-          </button>
-          <button onClick={handleEmail} className="w-full bg-white/5 border border-white/30 rounded-full p-3 flex items-center gap-3 hover:bg-white/10 hover:translate-x-1 transition-all">
-            <i className="fas fa-envelope text-2xl text-white w-8"></i>
-            <span className="text-gray-300">sngugi175@gmail.com</span>
-            <i className="fas fa-copy text-white ml-auto"></i>
-          </button>
-          <button onClick={handleGithub} className="w-full bg-white/5 border border-white/30 rounded-full p-3 flex items-center gap-3 hover:bg-white/10 hover:translate-x-1 transition-all">
-            <i className="fab fa-github text-2xl text-white w-8"></i>
-            <span className="text-gray-300">/simon-ngugi-dev</span>
-            <i className="fas fa-external-link-alt text-white ml-auto"></i>
-          </button>
+      <div className="mt-8">
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Contact Form */}
+          <div className="bg-black/50 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+            <h3 className="font-['Orbitron'] text-xl font-bold text-white mb-4">Send a Message</h3>
+            <form>
+              <div className="mb-4">
+                <input 
+                  type="text" 
+                  placeholder="Your Name"
+                  className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:border-white/50"
+                />
+              </div>
+              <div className="mb-4">
+                <input 
+                  type="email" 
+                  placeholder="Your Email"
+                  className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:border-white/50"
+                />
+              </div>
+              <div className="mb-4">
+                <textarea 
+                  rows={4}
+                  placeholder="Your Message"
+                  className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:border-white/50 resize-none"
+                ></textarea>
+              </div>
+              <button className="w-full bg-white/10 hover:bg-white/20 text-white py-2 rounded-lg border border-white/30 transition-all">
+                Send Message →
+              </button>
+            </form>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-4">
+            <div className="bg-black/50 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+              <h3 className="font-['Orbitron'] text-xl font-bold text-white mb-4">Contact Info</h3>
+              <div className="space-y-3">
+                <button onClick={handleWhatsApp} className="w-full flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-all">
+                  <i className="fab fa-whatsapp text-white text-xl"></i>
+                  <span className="text-gray-300">+254 773743248</span>
+                </button>
+                <button onClick={handleCall} className="w-full flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-all">
+                  <i className="fas fa-phone-alt text-white text-xl"></i>
+                  <span className="text-gray-300">0768924330</span>
+                </button>
+                <button onClick={handleEmail} className="w-full flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-all">
+                  <i className="fas fa-envelope text-white text-xl"></i>
+                  <span className="text-gray-300">sngugi175@gmail.com</span>
+                </button>
+                <button onClick={handleGithub} className="w-full flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-all">
+                  <i className="fab fa-github text-white text-xl"></i>
+                  <span className="text-gray-300">/simon-ngugi-dev</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

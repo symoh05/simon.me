@@ -5,12 +5,12 @@ import AnimatedSection from './AnimatedSection'
 export default function Hero() {
   return (
     <section id="home" className="relative py-8 overflow-hidden">
-      {/* Circle Background */}
+      {/* Circle Background - Responsive size (smaller on mobile) */}
       <div 
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10"
         style={{
-          width: '600px',
-          height: '600px',
+          width: 'min(600px, 85vw)',
+          height: 'min(600px, 85vw)',
           borderRadius: '50%',
           background: 'radial-gradient(circle, #444444 0%, #1a1a1a 50%, transparent 80%)',
           opacity: 0.8
@@ -35,10 +35,10 @@ export default function Hero() {
           </div>
         </AnimatedSection>
         
-        {/* Name */}
+        {/* Name - Matching navbar style: SIMON large + _CODEZ smaller gray */}
         <AnimatedSection delay={0.2}>
-          <h1 className="font-['Orbitron'] text-4xl md:text-6xl font-extrabold text-white glitch">
-            SIMON NGUGI
+          <h1 className="font-['Orbitron'] font-extrabold text-4xl md:text-6xl lg:text-7xl tracking-wide text-white glitch">
+            SIMON<span className="text-gray-400 text-2xl md:text-3xl lg:text-4xl">_CODEZ</span>
           </h1>
         </AnimatedSection>
         

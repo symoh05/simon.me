@@ -17,13 +17,14 @@ export default function Navbar() {
     return () => window.removeEventListener('resize', checkScreen)
   }, [])
 
-  const navLinks = [
-    { name: '[HOME]', href: '#home' },
-    { name: '[ABILITIES]', href: '#skills' },
-    { name: '[WEBSITES]', href: '#projects' },
-    { name: '[MOBILE/APPS]', href: '#apps' },
-    { name: '[CONTACT]', href: '#contact' },
-  ]
+ const navLinks = [
+  { name: '[HOME]', href: '/' },
+  { name: '[ABOUT]', href: '/about' },
+  { name: '[SERVICES]', href: '/services' },
+  { name: '[PROJECTS]', href: '/projects' },
+  { name: '[BLOG]', href: '/blog' },
+  { name: '[CONTACT]', href: '/contact' },
+]
 
   return (
     <>
@@ -63,7 +64,7 @@ export default function Navbar() {
 
         {/* Logo - Centered on mobile, right-aligned on desktop */}
         <div className="font-['Orbitron'] font-extrabold text-xl md:text-2xl tracking-wide text-white md:ml-auto">
-          SIMON//NGUGI<span className="text-sm text-gray-400">_CYBER</span>
+          SIMON<span className="text-sm text-gray-400">_CODEZ</span>
         </div>
 
         {/* Spacer for mobile balance */}

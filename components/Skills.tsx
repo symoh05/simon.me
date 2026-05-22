@@ -39,11 +39,13 @@ export default function Skills() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {skills.map((skill, index) => (
             <AnimatedSection key={index} delay={index * 0.1}>
-              <div className="skill-card relative bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/20 overflow-hidden cursor-pointer">
+              <div className="skill-card relative bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/20 overflow-hidden cursor-pointer h-full">
+                {/* Main icon */}
                 <i className={`${skill.icon} skill-main-icon text-3xl text-white mb-2 block transition-all duration-300`}></i>
-                <h4 className={`skill-title font-['Orbitron'] font-bold mt-2 mb-1 transition-all duration-300 text-gray-400`}>{skill.name}</h4>
-                <span className={`skill-desc text-xs transition-all duration-300 text-gray-500`}>{skill.desc}</span>
+                <h4 className="skill-title font-['Orbitron'] font-bold text-gray-400 text-base mb-1">{skill.name}</h4>
+                <span className="skill-desc text-xs text-gray-500 block">{skill.desc}</span>
                 
+                {/* Large background icon */}
                 <i 
                   className={`${skill.icon} skill-bg-icon absolute pointer-events-none`}
                   style={{
