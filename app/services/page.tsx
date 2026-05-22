@@ -105,20 +105,20 @@ export default function ServicesPage() {
       <div className="cyber-bg"></div>
       <div className="grid-overlay"></div>
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10 overflow-x-hidden">
         <Navbar />
         
         <div className="py-8">
-          {/* Hero Section with Watermark */}
-          <div className="relative text-center mb-8">
-            {/* Thick translucent watermark */}
+          {/* Hero Section with Watermark - Fixed width overflow */}
+          <div className="relative text-center mb-8 overflow-hidden">
+            {/* Thick translucent watermark - Smaller on mobile */}
             <div 
               className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
               style={{
-                fontSize: 'clamp(60px, 12vw, 140px)',
+                fontSize: 'clamp(40px, 10vw, 140px)',
                 fontWeight: '900',
                 color: 'rgba(255, 255, 255, 0.07)',
-                letterSpacing: '15px',
+                letterSpacing: 'clamp(5px, 2vw, 15px)',
                 fontFamily: "'Orbitron', monospace",
                 whiteSpace: 'nowrap',
                 top: '50%',

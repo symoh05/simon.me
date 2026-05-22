@@ -53,16 +53,16 @@ export default function ContactPage() {
         <Navbar />
         
         <div className="py-8">
-          {/* Hero Section with Watermark */}
+          {/* Hero Section with Watermark - Slightly reduced size */}
           <div className="relative text-center mb-8">
-            {/* Thick translucent watermark */}
+            {/* Thick translucent watermark - Slightly reduced */}
             <div 
               className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
               style={{
-                fontSize: 'clamp(60px, 12vw, 140px)',
+                fontSize: 'clamp(50px, 10vw, 130px)',
                 fontWeight: '900',
                 color: 'rgba(255, 255, 255, 0.07)',
-                letterSpacing: '15px',
+                letterSpacing: 'clamp(10px, 2.5vw, 14px)',
                 fontFamily: "'Orbitron', monospace",
                 whiteSpace: 'nowrap',
                 top: '50%',

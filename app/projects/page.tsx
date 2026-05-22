@@ -109,16 +109,16 @@ export default function ProjectsPage() {
         <Navbar />
         
         <div className="py-8">
-          {/* Hero Section with Watermark */}
+          {/* Hero Section with Watermark - Slightly reduced size */}
           <div className="relative text-center mb-8">
-            {/* Thick translucent watermark */}
+            {/* Thick translucent watermark - Slightly reduced */}
             <div 
               className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
               style={{
-                fontSize: 'clamp(80px, 15vw, 180px)',
+                fontSize: 'clamp(60px, 12vw, 160px)',
                 fontWeight: '900',
                 color: 'rgba(255, 255, 255, 0.07)',
-                letterSpacing: '20px',
+                letterSpacing: 'clamp(12px, 3vw, 18px)',
                 fontFamily: "'Orbitron', monospace",
                 whiteSpace: 'nowrap',
                 top: '50%',
