@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import AnimatedSection from './AnimatedSection'
 
 export default function Projects() {
   const [touchedIndex, setTouchedIndex] = useState<number | null>(null)
@@ -9,7 +8,7 @@ export default function Projects() {
   const projects = [
     {
       title: "Telefix.co.ke",
-      desc: "Solar & power services company – booking, responsive catalog, service management.",
+      desc: "Solar & power services – booking, catalog, service management.",
       tech: ["PHP", "MySQL", "Bootstrap"],
       icon: "fas fa-solar-panel",
       image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&h=400&fit=crop",
@@ -17,7 +16,7 @@ export default function Projects() {
     },
     {
       title: "aksagensetservices.co.ke",
-      desc: "Generator services & maintenance dashboard, client portal & industrial solutions.",
+      desc: "Generator services & maintenance dashboard, client portal.",
       tech: ["Next.js", "Node.js", "PostgreSQL"],
       icon: "fas fa-tools",
       image: "https://images.unsplash.com/photo-1581092335871-4d4a5b3c2f9b?w=600&h=400&fit=crop",
@@ -25,7 +24,7 @@ export default function Projects() {
     },
     {
       title: "royals.co.ke",
-      desc: "Sneaker e‑commerce, cart, auth, and PWA ready with Stripe integration.",
+      desc: "Sneaker e‑commerce, cart, auth, Stripe integration.",
       tech: ["React", "Supabase", "Stripe"],
       icon: "fas fa-shoe-prints",
       image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7512?w=600&h=400&fit=crop",
@@ -44,86 +43,85 @@ export default function Projects() {
   }
 
   return (
-    <section id="projects" className="py-12 scroll-mt-20">
-      {/* Sticky Header */}
+    <section id="projects" className="py-8 scroll-mt-20">
+      {/* Sticky Header - Compact */}
       <div className="sticky top-[70px] z-40 -mx-4 px-4 md:-mx-6 md:px-6 lg:-mx-8 lg:px-8">
-        <div className="bg-black/80 backdrop-blur-md rounded-xl border border-white/30 py-2 md:py-3 px-3 md:px-4 flex items-center justify-between gap-2 md:gap-4 flex-nowrap shadow-lg max-w-7xl mx-auto">
+        <div className="bg-black/80 backdrop-blur-md rounded-lg border border-white/30 py-1.5 md:py-2 px-3 md:px-4 flex items-center justify-between gap-2 md:gap-4 flex-nowrap shadow-lg max-w-7xl mx-auto">
           <div className="flex items-center gap-2 md:gap-3 flex-nowrap">
-            <i className="fas fa-globe text-xl md:text-2xl lg:text-3xl text-white"></i>
-            <span className="font-['Orbitron'] text-sm md:text-lg lg:text-2xl whitespace-nowrap">//_LIVE_WEBSITES</span>
-            <i className="fas fa-arrow-right blink text-white text-base md:text-xl"></i>
+            <i className="fas fa-globe text-lg md:text-xl lg:text-2xl text-white"></i>
+            <span className="font-['Orbitron'] text-xs md:text-base lg:text-xl whitespace-nowrap">//_LIVE_WEBSITES</span>
+            <i className="fas fa-arrow-right blink text-white text-sm md:text-lg"></i>
           </div>
-          <div className="hidden sm:block text-xs text-gray-400 whitespace-nowrap">
+          <div className="hidden sm:block text-[10px] text-gray-400 whitespace-nowrap">
             scroll ↓
           </div>
         </div>
       </div>
 
-      <div className="mt-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="mt-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {projects.map((project, index) => (
-            <AnimatedSection key={index} delay={index * 0.15}>
-              <div 
-                onClick={() => handleTap(index, project.link)}
-                onMouseEnter={() => setTouchedIndex(index)}
-                onMouseLeave={() => setTouchedIndex(null)}
-                className="relative bg-white/5 backdrop-blur-md rounded-xl overflow-hidden border border-white/20 transition-all duration-300 cursor-pointer group"
-                style={{
-                  transform: touchedIndex === index ? 'translateY(-4px)' : 'translateY(0)',
-                  borderColor: touchedIndex === index ? 'rgba(255, 255, 255, 0.5)' : 'rgba(255, 255, 255, 0.2)'
-                }}
-              >
-                {/* Image section */}
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
-                    style={{
-                      transform: touchedIndex === index ? 'scale(1.05)' : 'scale(1)'
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-black/30"></div>
-                  
-                  {/* Tech badges */}
-                  <div className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-2">
-                    {project.tech.map((tech, i) => (
-                      <span key={i} className="bg-black/70 backdrop-blur-sm px-2 py-1 rounded-full text-xs text-white border border-white/20">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                
-                {/* Content section */}
-                <div className="relative p-5">
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <h3 className="text-base md:text-xl font-bold text-white">
-                      {project.title}
-                    </h3>
-                    <i className="fas fa-external-link-alt text-gray-400 text-xs md:text-sm group-hover:text-white group-hover:translate-x-1 transition-all duration-300"></i>
-                  </div>
-                  <p className="text-gray-400 text-xs md:text-sm line-clamp-2">
-                    {project.desc}
-                  </p>
-                </div>
-                
-                {/* Large translucent background icon */}
-                <i 
-                  className={`${project.icon} absolute pointer-events-none transition-all duration-300`}
+            <div 
+              key={index}
+              onClick={() => handleTap(index, project.link)}
+              onMouseEnter={() => setTouchedIndex(index)}
+              onMouseLeave={() => setTouchedIndex(null)}
+              className="relative bg-white/5 backdrop-blur-md rounded-lg overflow-hidden border border-white/20 transition-all duration-300 cursor-pointer group"
+              style={{
+                transform: touchedIndex === index ? 'translateY(-2px)' : 'translateY(0)',
+                borderColor: touchedIndex === index ? 'rgba(255, 255, 255, 0.5)' : 'rgba(255, 255, 255, 0.2)'
+              }}
+            >
+              {/* Image section */}
+              <div className="relative h-40 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
                   style={{
-                    position: 'absolute',
-                    bottom: '-25px',
-                    right: '-25px',
-                    fontSize: '7rem',
-                    opacity: touchedIndex === index ? 0.3 : 0.12,
-                    transform: touchedIndex === index ? 'rotate(-30deg) scale(1.5)' : 'rotate(-15deg) scale(1)',
-                    transition: 'all 0.3s ease',
-                    zIndex: 0
+                    transform: touchedIndex === index ? 'scale(1.05)' : 'scale(1)'
                   }}
-                ></i>
+                />
+                <div className="absolute inset-0 bg-black/30"></div>
+                
+                {/* Tech badges */}
+                <div className="absolute bottom-2 left-2 right-2 flex flex-wrap gap-1.5">
+                  {project.tech.map((tech, i) => (
+                    <span key={i} className="bg-black/70 backdrop-blur-sm px-1.5 py-0.5 rounded-full text-[10px] text-white border border-white/20">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </AnimatedSection>
+              
+              {/* Content section */}
+              <div className="relative p-3">
+                <div className="flex items-center justify-between gap-2 mb-1">
+                  <h3 className="text-sm md:text-base font-bold text-white">
+                    {project.title}
+                  </h3>
+                  <i className="fas fa-external-link-alt text-gray-400 text-[10px] md:text-xs group-hover:text-white group-hover:translate-x-1 transition-all duration-300"></i>
+                </div>
+                <p className="text-gray-400 text-[10px] md:text-xs line-clamp-2">
+                  {project.desc}
+                </p>
+              </div>
+              
+              {/* Large translucent background icon */}
+              <i 
+                className={`${project.icon} absolute pointer-events-none transition-all duration-300`}
+                style={{
+                  position: 'absolute',
+                  bottom: '-20px',
+                  right: '-20px',
+                  fontSize: '5rem',
+                  opacity: touchedIndex === index ? 0.3 : 0.12,
+                  transform: touchedIndex === index ? 'rotate(-30deg) scale(1.5)' : 'rotate(-15deg) scale(1)',
+                  transition: 'all 0.3s ease',
+                  zIndex: 0
+                }}
+              ></i>
+            </div>
           ))}
         </div>
       </div>
