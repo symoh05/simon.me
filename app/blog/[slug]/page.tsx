@@ -238,14 +238,15 @@ export default function BlogPostPage() {
         <Navbar />
         
         <div className="py-8">
-          {/* Hero Image */}
+          {/* Hero Image - Dark gradient visible on all screens */}
           <div className="relative rounded-xl overflow-hidden mb-8 h-64 md:h-96">
             <img 
               src={post.image} 
               alt={post.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+            {/* Dark gradient overlay - visible on mobile and desktop */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
             
             {/* Category Badge */}
             <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full text-xs text-white border border-white/20">
