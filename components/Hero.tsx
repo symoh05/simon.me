@@ -31,7 +31,7 @@ export default function Hero() {
           </div>
         </div>
         
-        {/* Name - No glitch effect */}
+        {/* Name - With same styling pattern as page headers */}
         <h1 className="font-['Orbitron'] font-extrabold text-4xl md:text-6xl lg:text-7xl tracking-wide text-white">
           SIMON<span className="text-gray-400 text-2xl md:text-3xl lg:text-4xl">_CODEZ</span>
         </h1>

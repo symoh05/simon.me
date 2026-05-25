@@ -19,27 +19,28 @@ export default function Skills() {
         TECH
       </div>
 
-      {/* Sticky Header */}
+      {/* Sticky Header - Matching projects/apps header style */}
       <div className="sticky top-[70px] z-40 -mx-4 px-4 md:-mx-6 md:px-6 lg:-mx-8 lg:px-8">
-        <div className="bg-black/80 backdrop-blur-md rounded-lg border border-white/30 py-1.5 md:py-2 px-3 md:px-4 flex items-center justify-between gap-2 md:gap-4 flex-nowrap shadow-lg max-w-7xl mx-auto">
-          <div className="flex items-center gap-2 md:gap-3 flex-nowrap">
-            <i className="fas fa-microchip text-lg md:text-xl lg:text-2xl text-white"></i>
-            <span className="font-['Orbitron'] text-xs md:text-base lg:text-xl whitespace-nowrap">//_TECH_WEAPONS</span>
-            <i className="fas fa-cog fa-spin text-white text-sm md:text-lg"></i>
+        <div className="bg-black/80 backdrop-blur-md rounded-xl border border-white/30 py-2 md:py-3 px-4 md:px-6 flex items-center justify-between shadow-lg max-w-7xl mx-auto">
+          <div className="flex items-center gap-3">
+            <i className="fas fa-microchip text-xl md:text-2xl text-white"></i>
+            <span className="font-['Orbitron'] text-sm md:text-lg font-bold text-white">
+              TECH_<span className="text-gray-400">WEAPONS</span>
+            </span>
           </div>
-          <div className="hidden sm:block text-[10px] text-gray-400 whitespace-nowrap">
+          <div className="hidden sm:block text-xs text-gray-400">
             scroll ↓
           </div>
         </div>
       </div>
 
-      <div className="relative z-10 mt-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div className="relative z-10 mt-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {skills.map((skill, index) => (
-            <div key={index} className="skill-card relative bg-white/5 backdrop-blur-md rounded-lg p-3 border border-white/20 overflow-hidden cursor-pointer h-full">
+            <div key={index} className="skill-card relative bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/20 overflow-hidden cursor-pointer h-full">
               {/* Main icon */}
-              <i className={`${skill.icon} skill-main-icon text-2xl text-white mb-1.5 block transition-all duration-300`}></i>
-              <h4 className="skill-title font-['Orbitron'] font-bold text-gray-400 text-sm mb-0.5">{skill.name}</h4>
+              <i className={`${skill.icon} skill-main-icon text-2xl text-white mb-2 block transition-all duration-300`}></i>
+              <h4 className="skill-title font-['Orbitron'] font-bold text-gray-300 text-sm mb-1">{skill.name}</h4>
               <span className="skill-desc text-[10px] text-gray-500 block">{skill.desc}</span>
               
               {/* Large background icon */}

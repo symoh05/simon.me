@@ -14,164 +14,198 @@ export default function BlogPostPage() {
   const articles = [
     {
       id: 1,
-      slug: "building-modern-websites-nextjs",
-      title: "Building Modern Websites with Next.js 14",
-      excerpt: "Learn how to leverage the power of Next.js 14 to build fast, SEO-friendly web applications.",
+      slug: "why-your-business-needs-a-website",
+      title: "Why Your Business Needs a Professional Website",
+      excerpt: "Discover how a professional website can boost your business credibility, attract more customers, and increase sales.",
       content: `
-        <p>Next.js 14 has revolutionized the way we build web applications. With its server components, streaming, and improved performance, it's never been easier to create fast, SEO-friendly websites.</p>
+        <p>In today's digital world, customers expect businesses to have an online presence. A professional website is no longer optional—it's essential.</p>
         
-        <h2>Why Next.js?</h2>
-        <p>Next.js provides a fantastic developer experience with features like:</p>
-        <ul>
-          <li>Server-side rendering (SSR) for better SEO</li>
-          <li>Static site generation (SSG) for blazing fast pages</li>
-          <li>API routes for backend functionality</li>
-          <li>Built-in image optimization</li>
-        </ul>
+        <h2>Builds Trust and Credibility</h2>
+        <p>Customers trust businesses with professional websites. A well-designed site shows you're legitimate and serious about your business.</p>
         
-        <h2>Getting Started</h2>
-        <p>To start a new Next.js project, simply run:</p>
-        <pre><code>npx create-next-app@latest my-app</code></pre>
+        <h2>Attracts More Customers</h2>
+        <p>People search online for products and services every day. Without a website, potential customers may never find you.</p>
         
-        <p>This sets up everything you need with TypeScript and Tailwind CSS support.</p>
+        <h2>Works 24/7</h2>
+        <p>Unlike a physical store, your website works around the clock. Customers can learn about your business anytime, even at 3 AM.</p>
+        
+        <h2>Showcases Your Work</h2>
+        <p>A portfolio or gallery lets potential clients see what you can do. This builds confidence before they even contact you.</p>
+        
+        <h2>Conclusion</h2>
+        <p>Investing in a professional website is one of the best decisions for your business. Contact me to get started today!</p>
       `,
-      category: "tutorial",
-      readTime: "8 min",
-      date: "May 15, 2025",
+      category: "BUSINESS",
+      readTime: "5 min",
+      date: "May 25, 2025",
       author: "Simon Ngugi",
-      authorRole: "Full-Stack Developer",
-      icon: "fab fa-nextjs",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=600&fit=crop"
+      authorRole: "Web & Mobile Developer",
+      icon: "fas fa-chart-line",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop"
     },
     {
       id: 2,
-      slug: "react-native-vs-flutter",
-      title: "React Native vs Flutter: Which One to Choose?",
-      excerpt: "A comprehensive comparison between React Native and Flutter for cross-platform mobile app development.",
+      slug: "mobile-app-vs-website-whats-best",
+      title: "Mobile App vs Website: What's Best for Your Business?",
+      excerpt: "Confused about whether you need a mobile app or a website? This guide helps you choose based on your business goals.",
       content: `
-        <p>Choosing between React Native and Flutter can be challenging. Both are excellent frameworks for cross-platform mobile development, but they have different strengths.</p>
+        <p>Many business owners ask: "Should I get a mobile app or a website?" The answer depends on your specific needs.</p>
         
-        <h2>React Native</h2>
-        <p>React Native uses JavaScript and React, making it perfect for web developers transitioning to mobile. It has a large ecosystem and mature community.</p>
+        <h2>Websites: Your Digital Storefront</h2>
+        <p>Every business needs a website. It's like having a shop window that's open 24/7. Websites work on all devices and are easier to maintain.</p>
         
-        <h2>Flutter</h2>
-        <p>Flutter uses Dart and offers beautiful pre-built widgets. It provides excellent performance and a consistent UI across platforms.</p>
+        <h2>Mobile Apps: For Engaged Customers</h2>
+        <p>Apps are great for businesses with loyal customers who interact frequently. Examples include loyalty programs, booking systems, and online ordering.</p>
         
-        <h2>My Verdict</h2>
-        <p>For JavaScript developers, React Native is the natural choice. For those seeking pixel-perfect designs, Flutter might be better.</p>
+        <h2>What Most Businesses Need</h2>
+        <p>Start with a professional website. Once you have regular customers, consider adding a mobile app for special features.</p>
+        
+        <h2>Let's Discuss Your Needs</h2>
+        <p>Not sure which is right for you? Contact me for a free consultation.</p>
       `,
-      category: "comparison",
-      readTime: "10 min",
-      date: "May 10, 2025",
-      author: "Simon Ngugi",
-      authorRole: "Full-Stack Developer",
-      icon: "fab fa-react",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&h=600&fit=crop"
-    },
-    {
-      id: 3,
-      slug: "mastering-tailwind-css",
-      title: "Mastering Tailwind CSS: Tips and Tricks",
-      excerpt: "Advanced Tailwind CSS techniques to streamline your workflow and build beautiful interfaces faster.",
-      content: `
-        <p>Tailwind CSS has changed how we write styles. Instead of writing custom CSS, you compose utility classes to build unique designs.</p>
-        
-        <h2>Pro Tips</h2>
-        <ul>
-          <li>Use the group class for parent-child hover effects</li>
-          <li>Leverage arbitrary values for custom spacing</li>
-          <li>Create reusable components with @apply</li>
-        </ul>
-        
-        <h2>Performance Optimization</h2>
-        <p>Tailwind automatically purges unused styles in production, ensuring your CSS is as small as possible.</p>
-      `,
-      category: "tutorial",
+      category: "GUIDE",
       readTime: "6 min",
-      date: "May 5, 2025",
+      date: "May 20, 2025",
       author: "Simon Ngugi",
-      authorRole: "Full-Stack Developer",
-      icon: "fab fa-css3-alt",
-      image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=1200&h=600&fit=crop"
-    },
-    {
-      id: 4,
-      slug: "first-mobile-app-journey",
-      title: "How I Built My First Mobile App",
-      excerpt: "A personal journey of building and launching a cross-platform mobile app from scratch.",
-      content: `
-        <p>Building my first mobile app was a challenging but rewarding experience. Here's what I learned along the way.</p>
-        
-        <h2>The Idea</h2>
-        <p>I wanted to create a Bible app that works offline and provides daily verses. The goal was to make scripture accessible anytime, anywhere.</p>
-        
-        <h2>Development Process</h2>
-        <p>Using React Native and Expo, I was able to build for both iOS and Android simultaneously. The development took about 3 months.</p>
-        
-        <h2>Key Takeaways</h2>
-        <ul>
-          <li>Plan your data structure early</li>
-          <li>Test on real devices frequently</li>
-          <li>Don't underestimate app store submission time</li>
-        </ul>
-      `,
-      category: "case-study",
-      readTime: "12 min",
-      date: "April 28, 2025",
-      author: "Simon Ngugi",
-      authorRole: "Full-Stack Developer",
+      authorRole: "Web & Mobile Developer",
       icon: "fas fa-mobile-alt",
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&h=600&fit=crop"
     },
     {
-      id: 5,
-      slug: "future-of-web-development",
-      title: "The Future of Web Development",
-      excerpt: "Exploring upcoming trends in web development including AI integration and edge computing.",
+      id: 3,
+      slug: "how-much-does-a-website-cost",
+      title: "How Much Does a Professional Website Cost?",
+      excerpt: "A transparent breakdown of website costs for small businesses. No technical jargon—just honest pricing information.",
       content: `
-        <p>Web development is evolving rapidly. Here are the trends I believe will shape the future.</p>
+        <p>One of the first questions business owners ask is: "How much will a website cost me?" Here's an honest breakdown.</p>
         
-        <h2>AI Integration</h2>
-        <p>AI tools are becoming essential for development, from code generation to testing and deployment.</p>
+        <h2>What Affects Website Cost?</h2>
+        <ul>
+          <li><strong>Number of pages:</strong> A simple 5-page site costs less than a 20-page site.</li>
+          <li><strong>Features needed:</strong> Contact forms, galleries, and booking systems add to the price.</li>
+          <li><strong>E-commerce:</strong> Online stores require more work and cost more.</li>
+          <li><strong>Custom design:</strong> Unique designs cost more than templates.</li>
+        </ul>
         
-        <h2>Edge Computing</h2>
-        <p>Edge computing brings computation closer to users, reducing latency and improving performance.</p>
+        <h2>Typical Price Ranges</h2>
+        <p>Basic website (5-10 pages): $500 - $1,500<br/>
+        Business website with features: $1,500 - $3,500<br/>
+        E-commerce online store: $2,500 - $5,000+</p>
         
-        <h2>WebAssembly</h2>
-        <p>WASM allows running high-performance code in the browser, opening new possibilities for web applications.</p>
+        <h2>Ongoing Costs</h2>
+        <p>Domain registration ($15/year), hosting ($100-300/year), and maintenance ($50-150/month).</p>
+        
+        <h2>Get a Custom Quote</h2>
+        <p>Every business is unique. Contact me for a free, no-obligation quote tailored to your needs.</p>
       `,
-      category: "insights",
+      category: "PRICING",
       readTime: "7 min",
-      date: "April 20, 2025",
+      date: "May 15, 2025",
       author: "Simon Ngugi",
-      authorRole: "Full-Stack Developer",
-      icon: "fas fa-chart-line",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=600&fit=crop"
+      authorRole: "Web & Mobile Developer",
+      icon: "fas fa-dollar-sign",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=600&fit=crop"
+    },
+    {
+      id: 4,
+      slug: "how-to-choose-right-developer",
+      title: "How to Choose the Right Developer for Your Project",
+      excerpt: "A practical guide to finding and hiring the best web or app developer for your business.",
+      content: `
+        <p>Hiring a developer can feel overwhelming. Here's what to look for and what questions to ask.</p>
+        
+        <h2>Portfolio Matters</h2>
+        <p>Look at their previous work. Does it look professional? Do the websites work well on phones? This shows their quality.</p>
+        
+        <h2>Communication is Key</h2>
+        <p>Choose someone who explains things clearly without technical jargon. You should understand what you're paying for.</p>
+        
+        <h2>Questions to Ask</h2>
+        <ul>
+          <li>How many similar projects have you completed?</li>
+          <li>Will my website work on phones and tablets?</li>
+          <li>Do you provide ongoing support after launch?</li>
+          <li>Can I see examples of your work?</li>
+        </ul>
+        
+        <h2>Red Flags to Avoid</h2>
+        <p>Very low prices (you get what you pay for), no portfolio to show, or promises that sound too good to be true.</p>
+        
+        <h2>Why Choose Me?</h2>
+        <p>I've helped numerous businesses in Kenya and beyond build their online presence. Contact me to see my portfolio.</p>
+      `,
+      category: "ADVICE",
+      readTime: "6 min",
+      date: "May 10, 2025",
+      author: "Simon Ngugi",
+      authorRole: "Web & Mobile Developer",
+      icon: "fas fa-handshake",
+      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&h=600&fit=crop"
+    },
+    {
+      id: 5,
+      slug: "benefits-of-local-developer",
+      title: "Why Hire a Local Developer in Nairobi?",
+      excerpt: "The advantages of working with a developer who understands the Kenyan market and is available for face-to-face meetings.",
+      content: `
+        <p>As a Nairobi-based developer, I understand the unique needs of Kenyan businesses. Here's why local matters.</p>
+        
+        <h2>Understanding Local Payment Methods</h2>
+        <p>I integrate M-PESA, local bank transfers, and payment methods that Kenyan customers trust and use daily.</p>
+        
+        <h2>Face-to-Face Meetings</h2>
+        <p>Sometimes you need to sit down and explain your vision in person. Being local makes this possible.</p>
+        
+        <h2>Same Time Zone Support</h2>
+        <p>When you need help, I'm available during your business hours—not halfway across the world.</p>
+        
+        <h2>Knowledge of Local Market</h2>
+        <p>I understand what Kenyan customers expect from websites and apps, from design preferences to user behavior.</p>
+        
+        <h2>Support Local Economy</h2>
+        <p>By hiring local, you're investing in Kenya's tech ecosystem and creating opportunities for local talent.</p>
+      `,
+      category: "LOCAL",
+      readTime: "5 min",
+      date: "May 5, 2025",
+      author: "Simon Ngugi",
+      authorRole: "Web & Mobile Developer",
+      icon: "fas fa-map-marker-alt",
+      image: "https://images.unsplash.com/photo-1590086783191-a0694c7d1e6e?w=1200&h=600&fit=crop"
     },
     {
       id: 6,
-      slug: "optimizing-postgresql-queries",
-      title: "Optimizing Database Queries in PostgreSQL",
-      excerpt: "Best practices to optimize PostgreSQL queries for better performance in production.",
+      slug: "how-long-to-build-website",
+      title: "How Long Does It Take to Build a Website?",
+      excerpt: "Realistic timelines for website and mobile app development. Know what to expect before you start.",
       content: `
-        <p>Database performance is critical for application speed. Here are my top tips for PostgreSQL optimization.</p>
+        <p>Understanding project timelines helps you plan your business launch or marketing campaigns effectively.</p>
         
-        <h2>Use Indexes Wisely</h2>
-        <p>Indexes speed up read operations but slow down writes. Add indexes on columns used in WHERE clauses.</p>
+        <h2>Simple Business Website</h2>
+        <p>A professional 5-10 page website typically takes 2-4 weeks from start to finish, including design, content setup, and testing.</p>
         
-        <h2>Avoid SELECT *</h2>
-        <p>Only request the columns you need. This reduces data transfer and improves query performance.</p>
+        <h2>Website with Special Features</h2>
+        <p>If you need booking systems, payment integration, or custom functionality, expect 4-6 weeks.</p>
         
-        <h2>Analyze Query Plans</h2>
-        <p>Use EXPLAIN ANALYZE to understand how your queries execute and identify bottlenecks.</p>
+        <h2>E-commerce Online Store</h2>
+        <p>An online store with products, cart, and payment takes 6-8 weeks to do properly.</p>
+        
+        <h2>Mobile Apps</h2>
+        <p>A professional mobile app for both iPhone and Android typically takes 8-12 weeks.</p>
+        
+        <h2>What Affects Timeline?</h2>
+        <p>How quickly you provide content (text, photos), how many revisions you need, and how complex your requirements are.</p>
+        
+        <h2>Ready to Start?</h2>
+        <p>Contact me today for a timeline estimate based on your specific project needs.</p>
       `,
-      category: "tutorial",
-      readTime: "9 min",
-      date: "April 15, 2025",
+      category: "TIMELINE",
+      readTime: "6 min",
+      date: "April 28, 2025",
       author: "Simon Ngugi",
-      authorRole: "Full-Stack Developer",
-      icon: "fas fa-database",
-      image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200&h=600&fit=crop"
+      authorRole: "Web & Mobile Developer",
+      icon: "fas fa-clock",
+      image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=600&fit=crop"
     }
   ]
 
@@ -250,7 +284,7 @@ export default function BlogPostPage() {
             
             {/* Category Badge */}
             <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full text-xs text-white border border-white/20">
-              {post.category.toUpperCase()}
+              {post.category}
             </div>
           </div>
           
@@ -283,6 +317,22 @@ export default function BlogPostPage() {
             className="prose prose-invert prose-lg max-w-none mb-8"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+          
+          {/* CTA Section at bottom of article */}
+          <div className="mt-8 p-6 bg-gradient-to-r from-white/10 to-transparent rounded-xl border border-white/20 text-center">
+            <i className="fas fa-envelope text-2xl text-white mb-2 block"></i>
+            <h3 className="font-['Orbitron'] text-lg font-bold text-white mb-2">
+              Ready to Start Your Project?
+            </h3>
+            <p className="text-gray-300 text-sm mb-4">
+              Let's discuss your website or app needs. Get a free quote today.
+            </p>
+            <Link href="/contact">
+              <button className="bg-white/10 hover:bg-white/20 text-white px-5 py-2 rounded-lg border border-white/30 transition-all text-sm">
+                Contact Me →
+              </button>
+            </Link>
+          </div>
           
           {/* Back to Blog Button */}
           <div className="text-center pt-8 border-t border-white/20">

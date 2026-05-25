@@ -7,59 +7,68 @@ export default function Apps() {
 
   const apps = [
     {
-      title: "VerseFlow Bible",
+      title: "VerseFlow",
+      domain: " Bible",
       desc: "Cross-platform Bible app with daily verses, offline support.",
       tech: ["React Native", "Expo", "SQLite"],
       icon: "fas fa-bible",
-      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&h=400&fit=crop",
+      slug: "verseflow"
     },
     {
       title: "InvoicePro",
+      domain: "",
       desc: "Professional invoicing app – PDF invoices, payment tracking.",
       tech: ["React Native", "Node.js", "MongoDB"],
       icon: "fas fa-file-invoice-dollar",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+      slug: "invoicepro"
     },
     {
       title: "PesaTrack",
+      domain: "",
       desc: "Personal finance tracker – budget goals, analytics.",
       tech: ["Next.js", "IndexedDB", "Chart.js"],
       icon: "fas fa-chart-line",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop",
+      slug: "pesatrack"
     },
   ]
 
-  const handleTap = (index: number) => {
+  const handleTap = (index: number, slug: string) => {
     setTouchedIndex(index)
-    setTimeout(() => setTouchedIndex(null), 300)
+    setTimeout(() => {
+      setTouchedIndex(null)
+      window.location.href = `/projects/${slug}`
+    }, 300)
   }
 
   return (
     <section id="apps" className="py-8 scroll-mt-20">
-      {/* Sticky Header - Compact */}
+      {/* Sticky Header - Matching projects header style */}
       <div className="sticky top-[70px] z-40 -mx-4 px-4 md:-mx-6 md:px-6 lg:-mx-8 lg:px-8">
-        <div className="bg-black/80 backdrop-blur-md rounded-lg border border-white/30 py-1.5 md:py-2 px-3 md:px-4 flex items-center justify-between gap-2 md:gap-4 flex-nowrap shadow-lg max-w-7xl mx-auto">
-          <div className="flex items-center gap-2 md:gap-3 flex-nowrap overflow-x-auto hide-scrollbar">
-            <i className="fas fa-mobile-alt text-lg md:text-xl lg:text-2xl text-white"></i>
-            <span className="font-['Orbitron'] text-xs md:text-base lg:text-xl whitespace-nowrap">//_NATIVE_APPS_&_PWA</span>
-            <i className="fas fa-code-branch text-white text-sm md:text-lg"></i>
+        <div className="bg-black/80 backdrop-blur-md rounded-xl border border-white/30 py-2 md:py-3 px-4 md:px-6 flex items-center justify-between shadow-lg max-w-7xl mx-auto">
+          <div className="flex items-center gap-3">
+            <i className="fas fa-mobile-alt text-xl md:text-2xl text-white"></i>
+            <span className="font-['Orbitron'] text-sm md:text-lg font-bold text-white">
+              NATIVE_<span className="text-gray-400">APPS</span>
+            </span>
           </div>
-          <div className="hidden sm:block text-[10px] text-gray-400 whitespace-nowrap">
+          <div className="hidden sm:block text-xs text-gray-400">
             scroll ↓
           </div>
         </div>
       </div>
 
-      {/* Added margin-top to create space between header and cards */}
-      <div className="mt-6">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="mt-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {apps.map((app, index) => (
             <div 
               key={index}
-              onClick={() => handleTap(index)}
+              onClick={() => handleTap(index, app.slug)}
               onMouseEnter={() => setTouchedIndex(index)}
               onMouseLeave={() => setTouchedIndex(null)}
-              className="relative bg-white/5 backdrop-blur-md rounded-lg overflow-hidden border border-white/20 transition-all duration-300 cursor-pointer group"
+              className="relative bg-white/5 backdrop-blur-md rounded-xl overflow-hidden border border-white/20 transition-all duration-300 cursor-pointer group"
               style={{
                 transform: touchedIndex === index ? 'translateY(-2px)' : 'translateY(0)',
                 borderColor: touchedIndex === index ? 'rgba(255, 255, 255, 0.5)' : 'rgba(255, 255, 255, 0.2)'
@@ -88,10 +97,11 @@ export default function Apps() {
               </div>
               
               {/* Content section */}
-              <div className="relative p-3">
+              <div className="relative p-4">
                 <div className="flex items-center justify-between gap-2 mb-1">
-                  <h3 className="text-sm md:text-base font-bold text-white">
-                    {app.title}
+                  {/* Title with Orbitron font - all white */}
+                  <h3 className="font-['Orbitron'] font-bold text-white text-sm md:text-base">
+                    {app.title}<span className="text-gray-500">{app.domain}</span>
                   </h3>
                   <i className="fas fa-clock text-gray-400 text-[10px] md:text-xs group-hover:text-white transition-all duration-300"></i>
                 </div>
@@ -119,7 +129,7 @@ export default function Apps() {
         </div>
       </div>
 
-      <div className="mt-6 bg-white/5 rounded-lg p-3 border border-white/20">
+      <div className="mt-6 bg-white/5 rounded-xl p-4 border border-white/20">
         <div className="flex items-center gap-3 flex-wrap">
           <i className="fas fa-rocket text-xl text-white"></i>
           <span className="text-[10px] md:text-xs"><strong>More apps:</strong> Built custom PWAs for businesses, delivery trackers, admin dashboards.</span>

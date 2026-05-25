@@ -12,78 +12,80 @@ export default function BlogPage() {
   const articles = [
     {
       id: 1,
-      title: "Building Modern Websites with Next.js 14",
-      excerpt: "Learn how to leverage the power of Next.js 14 to build fast, SEO-friendly web applications.",
-      category: "tutorial",
-      readTime: "8 min",
-      date: "May 15, 2025",
-      icon: "fab fa-nextjs",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop",
-      slug: "building-modern-websites-nextjs"
+      title: "Why Your Business Needs a Professional Website",
+      excerpt: "Discover how a professional website can boost your business credibility, attract more customers, and increase sales.",
+      category: "business",
+      readTime: "5 min",
+      date: "May 25, 2025",
+      icon: "fas fa-chart-line",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      slug: "why-your-business-needs-a-website"
     },
     {
       id: 2,
-      title: "React Native vs Flutter: Which One to Choose?",
-      excerpt: "A comprehensive comparison between React Native and Flutter for cross-platform mobile app development.",
-      category: "comparison",
-      readTime: "10 min",
-      date: "May 10, 2025",
-      icon: "fab fa-react",
+      title: "Mobile App vs Website: What's Best for Your Business?",
+      excerpt: "Confused about whether you need a mobile app or a website? This guide helps you choose based on your business goals.",
+      category: "guide",
+      readTime: "6 min",
+      date: "May 20, 2025",
+      icon: "fas fa-mobile-alt",
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
-      slug: "react-native-vs-flutter"
+      slug: "mobile-app-vs-website-whats-best"
     },
     {
       id: 3,
-      title: "Mastering Tailwind CSS: Tips and Tricks",
-      excerpt: "Advanced Tailwind CSS techniques to streamline your workflow and build beautiful interfaces faster.",
-      category: "tutorial",
-      readTime: "6 min",
-      date: "May 5, 2025",
-      icon: "fab fa-css3-alt",
-      image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=600&h=400&fit=crop",
-      slug: "mastering-tailwind-css"
+      title: "How Much Does a Professional Website Cost?",
+      excerpt: "A transparent breakdown of website costs for small businesses. No technical jargon—just honest pricing information.",
+      category: "pricing",
+      readTime: "7 min",
+      date: "May 15, 2025",
+      icon: "fas fa-dollar-sign",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+      slug: "how-much-does-a-website-cost"
     },
     {
       id: 4,
-      title: "How I Built My First Mobile App",
-      excerpt: "A personal journey of building and launching a cross-platform mobile app from scratch.",
-      category: "case-study",
-      readTime: "12 min",
-      date: "April 28, 2025",
-      icon: "fas fa-mobile-alt",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
-      slug: "first-mobile-app-journey"
+      title: "How to Choose the Right Developer for Your Project",
+      excerpt: "A practical guide to finding and hiring the best web or app developer for your business.",
+      category: "advice",
+      readTime: "6 min",
+      date: "May 10, 2025",
+      icon: "fas fa-handshake",
+      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop",
+      slug: "how-to-choose-right-developer"
     },
     {
       id: 5,
-      title: "The Future of Web Development",
-      excerpt: "Exploring upcoming trends in web development including AI integration and edge computing.",
-      category: "insights",
-      readTime: "7 min",
-      date: "April 20, 2025",
-      icon: "fas fa-chart-line",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop",
-      slug: "future-of-web-development"
+      title: "Why Hire a Local Developer in Nairobi?",
+      excerpt: "The advantages of working with a developer who understands the Kenyan market and is available for face-to-face meetings.",
+      category: "local",
+      readTime: "5 min",
+      date: "May 5, 2025",
+      icon: "fas fa-map-marker-alt",
+      image: "https://images.unsplash.com/photo-1590086783191-a0694c7d1e6e?w=600&h=400&fit=crop",
+      slug: "benefits-of-local-developer"
     },
     {
       id: 6,
-      title: "Optimizing Database Queries in PostgreSQL",
-      excerpt: "Best practices to optimize PostgreSQL queries for better performance in production.",
-      category: "tutorial",
-      readTime: "9 min",
-      date: "April 15, 2025",
-      icon: "fas fa-database",
-      image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&h=400&fit=crop",
-      slug: "optimizing-postgresql-queries"
+      title: "How Long Does It Take to Build a Website?",
+      excerpt: "Realistic timelines for website and mobile app development. Know what to expect before you start.",
+      category: "timeline",
+      readTime: "6 min",
+      date: "April 28, 2025",
+      icon: "fas fa-clock",
+      image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop",
+      slug: "how-long-to-build-website"
     }
   ]
 
   const categories = [
     { id: 'all', name: 'ALL', icon: 'fas fa-th-large' },
-    { id: 'tutorial', name: 'TUTORIALS', icon: 'fas fa-graduation-cap' },
-    { id: 'case-study', name: 'CASE STUDIES', icon: 'fas fa-briefcase' },
-    { id: 'insights', name: 'INSIGHTS', icon: 'fas fa-lightbulb' },
-    { id: 'comparison', name: 'COMPARISONS', icon: 'fas fa-balance-scale' }
+    { id: 'business', name: 'BUSINESS', icon: 'fas fa-chart-line' },
+    { id: 'guide', name: 'GUIDES', icon: 'fas fa-book' },
+    { id: 'pricing', name: 'PRICING', icon: 'fas fa-tag' },
+    { id: 'advice', name: 'ADVICE', icon: 'fas fa-lightbulb' },
+    { id: 'local', name: 'LOCAL', icon: 'fas fa-map-marker-alt' },
+    { id: 'timeline', name: 'TIMELINE', icon: 'fas fa-clock' }
   ]
 
   const filteredArticles = articles.filter(article => {
@@ -110,10 +112,10 @@ export default function BlogPage() {
             <div 
               className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
               style={{
-                fontSize: 'clamp(80px, 15vw, 180px)',
+                fontSize: 'clamp(60px, 12vw, 160px)',
                 fontWeight: '900',
                 color: 'rgba(255, 255, 255, 0.07)',
-                letterSpacing: '20px',
+                letterSpacing: 'clamp(12px, 3vw, 18px)',
                 fontFamily: "'Orbitron', monospace",
                 whiteSpace: 'nowrap',
                 top: '50%',
@@ -125,11 +127,11 @@ export default function BlogPage() {
             
             <div className="relative z-10">
               <h1 className="font-['Orbitron'] text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">
-                BLOG_<span className="text-gray-400">&_INSIGHTS</span>
+                BLOG<span className="text-gray-400">_&_INSIGHTS</span>
               </h1>
               <div className="w-16 h-0.5 bg-white/30 mx-auto"></div>
               <p className="text-gray-400 mt-3 text-sm max-w-2xl mx-auto">
-                Thoughts, tutorials, and insights on web development
+                Practical advice for business owners on websites, apps, and digital growth
               </p>
             </div>
           </div>
@@ -245,19 +247,19 @@ export default function BlogPage() {
               <div className="text-[10px] text-gray-400">Articles</div>
             </div>
             <div className="bg-white/5 rounded-lg p-3 text-center border border-white/10">
-              <i className="fas fa-graduation-cap text-xl text-white mb-1 block"></i>
-              <div className="text-xl font-bold text-white">{articles.filter(a => a.category === 'tutorial').length}</div>
-              <div className="text-[10px] text-gray-400">Tutorials</div>
+              <i className="fas fa-chart-line text-xl text-white mb-1 block"></i>
+              <div className="text-xl font-bold text-white">{articles.filter(a => a.category === 'business').length}</div>
+              <div className="text-[10px] text-gray-400">Business</div>
             </div>
             <div className="bg-white/5 rounded-lg p-3 text-center border border-white/10">
-              <i className="fas fa-briefcase text-xl text-white mb-1 block"></i>
-              <div className="text-xl font-bold text-white">{articles.filter(a => a.category === 'case-study').length}</div>
-              <div className="text-[10px] text-gray-400">Case Studies</div>
+              <i className="fas fa-book text-xl text-white mb-1 block"></i>
+              <div className="text-xl font-bold text-white">{articles.filter(a => a.category === 'guide').length}</div>
+              <div className="text-[10px] text-gray-400">Guides</div>
             </div>
             <div className="bg-white/5 rounded-lg p-3 text-center border border-white/10">
-              <i className="fas fa-lightbulb text-xl text-white mb-1 block"></i>
-              <div className="text-xl font-bold text-white">{articles.filter(a => a.category === 'insights').length}</div>
-              <div className="text-[10px] text-gray-400">Insights</div>
+              <i className="fas fa-tag text-xl text-white mb-1 block"></i>
+              <div className="text-xl font-bold text-white">{articles.filter(a => a.category === 'pricing').length}</div>
+              <div className="text-[10px] text-gray-400">Pricing</div>
             </div>
           </div>
 
@@ -265,10 +267,10 @@ export default function BlogPage() {
           <div className="mt-10 text-center bg-gradient-to-r from-white/5 to-transparent rounded-xl p-5 border border-white/20">
             <i className="fas fa-envelope-open-text text-2xl text-white mb-2 block"></i>
             <h2 className="font-['Orbitron'] text-lg font-bold text-white mb-1">
-              Never Miss an Article
+              Get Business Tips
             </h2>
             <p className="text-gray-400 text-xs mb-3 max-w-md mx-auto">
-              Subscribe to get notified when I publish new content.
+              Subscribe for practical advice on growing your business online.
             </p>
             <div className="flex flex-col sm:flex-row gap-2 max-w-sm mx-auto">
               <input
